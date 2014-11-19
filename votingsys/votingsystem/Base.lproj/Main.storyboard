@@ -82,7 +82,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="S3P-oM-HVE" kind="show" id="yQL-OX-iqs"/>
+                                    <segue destination="S3P-oM-HVE" kind="show" identifier="viewResultsSegue" id="yQL-OX-iqs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,6 +108,7 @@
                         <outlet property="firstNameUITextField" destination="J60-zE-YLs" id="1Na-rD-85m"/>
                         <outlet property="lastNameUITextField" destination="1s6-rM-fvw" id="awH-TH-58t"/>
                         <outlet property="ssnUITextField" destination="T2K-po-vTx" id="QwM-Lr-ydu"/>
+                        <outlet property="voteButton" destination="st0-W0-iSp" id="FaN-zS-BHp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -180,6 +181,12 @@
                                     <constraint firstAttribute="width" constant="176" id="NrP-ey-zMo"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1V-Ge-rV1">
+                                <rect key="frame" x="16" y="107" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -197,7 +204,18 @@
                             <constraint firstItem="Eqz-x7-ypU" firstAttribute="top" secondItem="WaE-0A-CMa" secondAttribute="bottom" constant="72" id="tOi-a9-doY"/>
                             <constraint firstItem="4Lo-Ti-6Kh" firstAttribute="trailing" secondItem="SKB-Sf-Dek" secondAttribute="trailingMargin" id="wiX-VD-tWb"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="n1V-Ge-rV1"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="candidate1Name" destination="rl0-SE-5ps" id="TDk-II-57D"/>
+                        <outlet property="candidate1Votes" destination="J4S-9f-DGo" id="kwh-gx-ha5"/>
+                        <outlet property="candidate2Name" destination="J1W-VE-bIk" id="tsF-ZF-BAZ"/>
+                        <outlet property="candidate2Votes" destination="4Lo-Ti-6Kh" id="gWt-X8-bHJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaX-o0-GDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,7 +257,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XwX-s7-QyI" kind="show" identifier="firstCandidateSegue" id="tLa-lE-Ah0"/>
+                                    <segue destination="S3P-oM-HVE" kind="show" identifier="firstCandidateSegue" id="cNi-Rb-6Cy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRJ-4g-zXE">
@@ -252,7 +270,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XwX-s7-QyI" kind="show" identifier="secondCandidateSegue" id="Jgv-dt-6qP"/>
+                                    <segue destination="S3P-oM-HVE" kind="show" identifier="secondCandidateSegue" id="11u-hj-rPX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -381,6 +399,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Jgv-dt-6qP"/>
+        <segue reference="yQL-OX-iqs"/>
     </inferredMetricsTieBreakers>
 </document>
